@@ -1,0 +1,71 @@
+1. Apa itu javascript ?
+
+Javascript adalah : 
+- bahasa pemprograman untuk melakukan otomasi, membuat logiga, dan suatu interaksi dengan komputer. 
+- Support banyak tools automation menggunakan bahasa tersebut seperti pada functional testing
+ (E2E/UI Testing : Cypress, Playwright, Selenium webdriver dengan js, TestCafe) 
+ (unit/integration Testing : Jest, Mocha + Chai, Jasmine)
+ (Performance Testing : K6, Jmeter, Artillery)
+- Mudah dipakai untuk browser otomasi, karena js adalah bahasa asli modern browser (firefox, chrome, edge, safari), sehingga
+  keuntungannya adalah browser akan sangat mudah memahami command dari script otomasi tanpa perlu menggunakan plugin tambahan atau
+  connector dari ini dampaknya proses pengujian akan lebih cepat karena tidak ada delay yang terjadi untuk melakukan terjemahan bahasa
+  yang dapat dimengerti oleh browser.
+- Bisa di pakai api testing
+- good integration with ci/cd, karena js jalan di node.js dimana itu runtime yang ada di tools untuk cicd seperti github action,
+  github ci, jenkins, azure devops. sehingga tidak perlu ada runtime tambahan untuk menjalankan js.
+- ekosistem npm sangat besar, jadi banyak plugin external yang dapat digunakan dengan mudah untuk mendukukng proses pengujian berbasis otomasi
+
+Javascript bisa dijalankan dimana :
+Browser 
+Node.js (Console external browser)
+
+2. Variable
+
+Terdapat 2 jenis level dari variable yaitu block-level, dan function level.
+- block level adalah jenis variable yang hanya bisa dipanggil atau digunakan didalam block {}
+  (let : adalah variable yang valuenya dapat berubah. cocok digunakan contohnya seperti counter, loop index, dan perhitungan
+  kemudian gunakan didalam {} agar variable tidak dapat digunakan keluar (Mutable modern))
+  (const : adalah jenis variable yang valuenya tetap, tetapi jika didalam array nilainya bisa berubah terkecuali referensi arraynya
+  Imutable)
+  (var : adalah jenis variable yang dapat dipanggil secara global atau tidak berdasarkan di dalam suatu blok saja {}.
+  nilainya bisa berubah, mutable - rawan bug)
+
+  | Tipe Data |           Contoh            |
+  | Number    |          100, 3.14          |
+  | String    |           "test"            |
+  | Boolean   |        true / false         |
+  |Undifined  |     Variable belum di isi.  |
+  |Null       | Kosong, sengaja dikosongkan |
+
+3. Operator Dasar
+
+- Operator Aritmatika 
+
+| Operator | Fungsi              | Contoh       |
+| -------- | ------------------- | ------------ |
+| +        | Penjumlahan         | 5 + 3 // 8   |
+| -        | Pengurangan         | 5 - 3 // 2   |
+| *        | Perkalian           | 5 * 3 // 15  |
+| /        | Pembagian           | 5 / 2 // 2.5 |
+| %        | Modulus / sisa bagi | 5 % 2 // 1   |
+
+- Operator Perbandingan
+
+| Operator | Fungsi                     | Contoh             |
+| -------- | -------------------------- | ------------------ |
+| ==       | Sama (nilai saja)          | 5 == "5" // true   |
+| ===      | Sama persis (nilai + tipe) | 5 === "5" // false |
+| !=       | Tidak sama                 | 5 != 3 // true     |
+| !==      | Tidak sama persis          | 5 !== "5" // true  |
+| >        | Lebih besar                | 10 > 7 // true     |
+| <        | Lebih kecil                | 5 < 3 // false     |
+| >=       | Lebih besar atau sama      | 5 >= 5 // true     |
+| <=       | Lebih kecil atau sama      | 4 <= 5 // true     |
+
+- Operator Logika
+
+| Operator | Fungsi                         | Contoh                   |   |                |
+| -------- | ------------------------------ | ------------------------ | - | -------------- |
+| &&       | AND → semua kondisi harus true | (5 > 3 && 2 < 4) // true |   |                |
+| ||       | OR → salah satu kondisi true   | (5 < 3                   |   | 2 < 4) // true |
+| !        | NOT → membalik boolean         | !(5 === 10) // true      |   |                |
