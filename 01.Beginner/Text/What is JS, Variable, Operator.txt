@@ -1,7 +1,7 @@
 1. Apa itu javascript ?
 
 Javascript adalah : 
-- bahasa pemprograman untuk melakukan otomasi, membuat logiga, dan suatu interaksi dengan komputer. 
+- bahasa pemprograman untuk melakukan otomasi, membuat logika, dan suatu interaksi dengan komputer. 
 - Support banyak tools automation menggunakan bahasa tersebut seperti pada functional testing
  (E2E/UI Testing : Cypress, Playwright, Selenium webdriver dengan js, TestCafe) 
  (unit/integration Testing : Jest, Mocha + Chai, Jasmine)

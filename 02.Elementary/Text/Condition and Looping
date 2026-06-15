@@ -1,0 +1,64 @@
+1.  ¡f else 
+perkondisian yang membuat keputusan berdasarkan kondisi.
+
+if(condition){
+    statement 1
+}
+else if(condition 2){
+    statement 2
+}
+else{
+    default
+}
+
+---------------------------
+
+2. switch case
+sama seperti if else, tetapi cocok digunakan jika ada banyak kemungkinan karena akan lebih rapih.
+
+Switch(condition){
+    case *condition1: statement 1 ; break ;
+    case *condition2: statement 2 ; break ;
+    default: statement default; -- kecuali
+}
+
+---------------------------
+
+3. Ternary opearator
+versi singkat dari if else dengan 1 kondisi.
+
+
+(condition) ? 'true response' : 'false response'
+
+---------------------------
+
+4. For loop
+- melakukan perulangan sampai jumlah iterasi sama dengan nilai yang ditetapkan.
+- Target iterasinya sudah ditetapkan
+- Cocok untuk melakukan menelusuri nilai array karena inisiasinya langsung dalam 1 baris
+
+
+for(let i = 0 ; i < 10 ; i++){  -- (condition inisiasi iteration from ; condition iteration end ; increment )
+    Statement
+}
+
+---------------------------
+
+5. While loop
+- Cocok digunakan jika jumlah iterasi tidak di ketahui, dan loop akan terus berjalan sampai kondisi terpenuhi
+- Biasanya digunakan contohnya seperti kondisi menunggu data dari server sampai kondisi true
+
+while(condition){
+    statement
+}
+
+---------------------------
+
+6. Do-While loop
+- mirip dengan while loop, tetapi dia akan menjalankan statement sekali di awal sebelum masuk ke perkondisian
+
+do{
+    statement - jalan sekali
+}while(condition);
+
+---------------------------
