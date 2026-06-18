@@ -1,0 +1,68 @@
+1. Function declaration - fungsi biasa
+
+- fungsi adalah blok kode yang dapat dipanggil untuk melakukan permintaan tertentu secara berulang-ulang
+- konsepnya adalah menerima parameter sebagai imputan dalam suatu variable, kemudian akan mengeluarkan output melalui return dari fungsi yang di panggil.
+- bisa dipanggil sebelum di deklarasikan
+- cocok untuk fungsi utama, modular, atau fungsi yang akan dipanggil dibanyak tempat
+
+2. Arrow Function
+
+- versi fungsi yang lebih ringkas dari fungsi biasa
+- fungsi 1 baris / callback
+- harus di deklarasikan dulu
+- syntax lebih ringkas, ideal untuk fungsi pendek
+- callback function seprti di .filter(), .map(), .reduce()
+
+3. Function with default value
+
+- memberikan nilai default pada suatu parameter agar fungsi berjalan baik walaupun parameter tidak diinputkan
+
+4. Array
+
+- Adalah sebuah variable yang dapat menyimpan banyak nilai
+- Setiap elemen atau nilai dari suatu variable array memiliki index untuk sebagai indentitas suatu value dalam array
+
+---
+elemen[index] -> untuk mengakses value tertentu dalam array
+push() -> untuk menambahkan elemen diakhir
+pop() -> menghapus elemen terakhir
+---
+
+5. Array method
+a. map()    -> menampung value, dan mengubah semua elemen array menjadi elemen baru
+            -> tidak mengubah elemen asli
+            -> tidak perlu melakukan inisiasi index di variable awal
+b. filter() -> memilih elemen tertentu berdasarkan kondisi kemudian dapat menghasilkan array baru
+---------------------------------
+let filter = arrayNama.filter(n => [15, 18].includes(n));
+console.log(filter);
+---------------------------------
+
+
+c. reduce() -> mengabungkan semua nilai menjadi 1 nilai (ditotalkan)
+---------------------------------
+array.reduce((accumulator, currentValue) => {
+    // lakukan sesuatu → kembalikan nilai baru
+}, initialValue);
+---------------------------------
+
+6. Nested array
+- array di dalam array
+- berguna untuk metrik, table, dan grup yang kompleks
+- akses elemennya menggunakan 2 index [][]
+
+---------------------------------
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+
+// Ambil nilai tengah
+console.log(matrix[1][1]); // 5 → baris ke-2, kolom ke-2
+
+// Ubah nilai pojok
+matrix[0][0] = 0;
+console.log(matrix); 
+// [[0,2,3],[4,5,6],[7,8,9]]
+------------------------------------
