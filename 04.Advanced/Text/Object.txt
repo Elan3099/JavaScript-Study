@@ -1,0 +1,76 @@
+>> OBJECT DASAR
+
+Konsep :
+1. Object adalah kumpulan dari beberapa properties
+2. properties ibarat seperti table yang terdiri atas nama propertis / header an value atau isinya
+3. dapat menyimpan tipe data apa saja
+
+Contoh :
+properties -> nama, kelas
+value -> "rudi", "2"
+
+4. untuk mengakses properties adalah object.namaproperties
+
+penulisan :
+
+let namaObject = {
+    Nama: "rudi",
+    Kelas: "2"
+}
+
+>> NESTED OBJECT
+
+Konsep :
+1. object yang berisi properties object
+2. untuk data yang kompleks atau bertingkat, misalnya object dataSekolah, berisi properties object identitasSiswa dengan
+isi nama object nama, kelas 
+3. Akses menggunakan dot notation bertingkat (object.objectProperties.properties)
+
+>> DESTRUCTURING OBJECT
+
+1. adalah cara cepat untuk mengambil properties dari object dan menyimpannya ke dalam variable baru
+2. tidak perlu menulis object.namaproperties berulang kali
+
+// Destructuring
+let { name, age } = person;
+
+console.log(name); // "Rudi"
+console.log(age);  // 30
+
+>> SPREAD OPERATOR AND REST OPERATOR
+
+Konsep SPREAD OPERATOR :
+
+1. mengabungkan isi array atau object menjadi satu dalam variable array atau object baru
+2. dipakai di luar fungsi
+
+----------------------------------
+Array:
+
+let arr1 = [1,2,3];
+let arr2 = [...arr1, 4,5]; // gabungkan arr1 + elemen baru
+console.log(arr2); // [1,2,3,4,5]
+
+Object:
+
+let obj1 = {a:1, b:2};
+let obj2 = {...obj1, c:3}; // gabungkan obj1 + properti baru
+console.log(obj2); // {a:1, b:2, c:3}
+----------------------------------
+
+Konsep REST OPERATOR 
+
+1. Rest operator digunakan didalam parameter suatu fungsi untuk mengambil keseluruhan argumen dalam suatu array atau object 
+dan akan menghasilkan sebuah array baru yang dapat di olah oleh array method.
+2. cocok digunakan untuk parameter yang tidak tetap
+
+-----------------------------------
+function sum(...fruits) {
+  // fruits → semua buah masuk ke keranjang sebagai array
+  return fruits.reduce((acc, fruit) => acc + fruit, 0);
+}
+
+console.log(sum(1, 2, 3)); // 6
+console.log(sum(4, 5, 6, 7)); // 22
+-----------------------------------
+
