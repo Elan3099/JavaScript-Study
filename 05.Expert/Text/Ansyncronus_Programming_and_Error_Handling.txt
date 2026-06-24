@@ -1,0 +1,41 @@
+1. Callback function
+- adalah fungsi yang dikirim sebagai argumen ke fungsi lain,
+untuk dijalankan sebagai fungsi sesudah fungsi pertama di jalankan
+- cocok digunakan dalam proses yang membutuhkan dijalankan secara berurutan
+
+contoh konsep :
+fungsi kalkulator
+fungsi callback "menampilkan perhitungan selesai"
+
+calculator(angka, Callback)
+
+
+2. Promise 
+- adalah object yang mempresentasikan hasil operasi asyncronous
+- bisa sukses (resolve) atau gagal (reject)
+- menanggani hasil .then() sukses, dan .catch() gagal
+- fungsi dijalankan secara pararel
+- Panggil callback di .finally() supaya selalu dijalankan
+
+console.log("\nPromise Example\n");
+
+// Fungsi cek buku dengan Promise
+function cekBuku(available) {
+  return new Promise((resolve, reject) => {
+    if (available) {
+      resolve("Buku tersedia");
+    } else {
+      reject("Buku tidak tersedia");
+    }
+  });
+}
+
+// Contoh pemanggilan: berhasil
+cekBuku(true)
+  .then((msg) => console.log("Success:", msg))
+  .catch((err) => console.log("Error:", err));
+
+// Contoh pemanggilan: gagal
+cekBuku(false)
+  .then((msg) => console.log("Success:", msg))
+  .catch((err) => console.log("Error:", err));
