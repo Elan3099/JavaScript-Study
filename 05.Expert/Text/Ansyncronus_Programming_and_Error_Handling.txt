@@ -39,3 +39,9 @@ cekBuku(true)
 cekBuku(false)
   .then((msg) => console.log("Success:", msg))
   .catch((err) => console.log("Error:", err));
+
+
+  3. Async / Await
+  - Async - menandai fungsi sebagai ansyncronous -> fungsi akan selalu mengembalikan promise
+  - await - sequential proses running
+  - kode terlihat syncronous tapi berjalan asyncronous di belakang layar
